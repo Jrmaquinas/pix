@@ -37,7 +37,7 @@ function converterPixRecebido(valorPix: number) {
 }
 
 
-app.get("/consulta-Maquina01", async (req, res) => {
+app.get("/consultar", async (req, res) => {
     var valorAux = 0;
     var ticket = 1;
     if (valorDoPix > 0 && valorDoPix >= ticket) {
@@ -56,7 +56,7 @@ app.get("/consulta-Maquina01", async (req, res) => {
     }
 });
 
-//flaksdfjaskldfj << ALTERAR PARA O TXID DA MAQUINA
+
 app.get("/consulta", async (req, res) => {
     var pulsosFormatados = converterPixRecebido(valordoPixMaquina2); //<<<<<<ALTERAR PARA O NUMERO DA MAQUINA
 
@@ -96,10 +96,6 @@ app.post("/rota-recebimento", async (req, res) => {
 
             if (req.body.pix[0].txid == "70a8cdcb59b54eac0005") {
                 valorDoPix = req.body.pix[0].valor;
-                
-            }
-
-            if (req.body.pix[0].txid == "70a8cdcb59b54eac0005") {
                 
             }
 
