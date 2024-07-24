@@ -71,7 +71,7 @@ app.get("/consulta", async (req, res) => {
 
 
 
-app.post("/rota-recebimento", async (req, res) => {
+app.post("/recebimento", async (req, res) => {
     try {
         var ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
         console.log("ip");
@@ -85,7 +85,7 @@ app.post("/rota-recebimento", async (req, res) => {
         }
 
 
-        if (qy != 'myhash12342024' && qy != 'myhash12342024') {
+        if (qy != 'myhash1234' && qy != 'myhash1234/pix') {
             return res.status(401).json({ "unauthorized": "unauthorized" });
         }
 
